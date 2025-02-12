@@ -8,8 +8,8 @@ Prerequisite: common-services is a dependency, and should be installed first bef
 
 Collection published at https://documenter.getpostman.com/view/3286793/2sAYXBGzKi
 
-Add student: localhost:8080/student-service/students/addStudent
-List all students: localhost:8080/student-service/students/list
-get student details: localhost:8080/student-service/students/list
+1. Add student: localhost:8080/student-service/students/addStudent
+2. List all students: localhost:8080/student-service/students/list
+3. get student details: localhost:8080/student-service/students/list
 
 
