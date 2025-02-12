@@ -17,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 import rak.skiply.common_services.dto.StudentDto;
 import rak.skiply.student.entity.Student;
 import rak.skiply.student.service.StudentService;
+import rak.skiply.student.utility.*;
 
 @Slf4j
 @RestController
@@ -26,19 +27,19 @@ public class StudentController {
 	@Autowired
     private StudentService studentService;
 	
-	@GetMapping("/list")
+	@GetMapping(Constants.LIST_STUDENTS_URL)
     public ResponseEntity<List<Student>> getStudentList() {
         List<Student> students = studentService.getAllStudents();
         return ResponseEntity.status(HttpStatus.OK).body(students);
     }
 
-    @GetMapping("/{studentId}")
-    public ResponseEntity<StudentDto> getStudentDetails(@Valid @PathVariable("studentId") String studentId) {
+    @GetMapping(Constants.FETCH_STUDENT_DETAILS_URL)
+    public ResponseEntity<StudentDto> getStudentDetails(@Valid @PathVariable(Constants.STUDENT_ID) String studentId) {
         StudentDto studentDetails = studentService.getStudentById(studentId);
         return ResponseEntity.status(HttpStatus.OK).body(studentDetails);
     }
     
-    @PostMapping("/addStudent")
+    @PostMapping(Constants.ADD_STUDENT_URL)
     public StudentDto addStudent(@Valid @RequestBody StudentDto studentDetails){
         return studentService.saveStudent(studentDetails);
         

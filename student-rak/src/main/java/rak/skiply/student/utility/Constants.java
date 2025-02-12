@@ -14,6 +14,10 @@ public class Constants {
 	public static final String STUDENT_SERVICE_RETRIEVE_STUDENTBY_STUDENTID =  "/{studentId}";
 	public static final String UNEXPECTED_ERROR_MSG = "Unexpected error occurred: {}";
 	public static final String STUDENT_NOT_FOUND = "No student found for this studentId ";
+	public static final String LIST_STUDENTS_URL = "/list";
+	public static final String FETCH_STUDENT_DETAILS_URL = "/{studentId}";
+	public static final String STUDENT_ID = "studentId";
+	public static final String ADD_STUDENT_URL = "/addStudent";
 
 
 }
